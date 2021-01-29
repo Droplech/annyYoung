@@ -70,15 +70,15 @@ $('.detailInfo_item').click(function(){
 
 
 
-$('.consultation').click(function(){
+$('.consultation .title').click(function(){
 
-  if(  !$('.consultation').hasClass('active')){
+  if(  !$('.consultation .title').hasClass('active')){
 
-    $('.consultation').addClass('active')
+    $('.consultation .title').addClass('active')
     $('.consultation').css("right","0")
 
   }else{
-  $('.consultation').removeClass('active')
+  $('.consultation .title').removeClass('active')
     $('.consultation').css("right","-378px")
   }
   
