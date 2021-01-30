@@ -75,11 +75,11 @@ $('.consultation .title').click(function(){
   if(  !$('.consultation .title').hasClass('active')){
 
     $('.consultation .title').addClass('active')
-    $('.consultation').css("right","0")
+    $('.consultation').addClass('consultation_active')
 
   }else{
   $('.consultation .title').removeClass('active')
-    $('.consultation').css("right","-378px")
+    $('.consultation').removeClass('consultation_active')
   }
   
 })
@@ -87,6 +87,42 @@ $('.consultation .title').click(function(){
 
 
 
+$('.mob_menu_button').click(function(){
+  $('.mob_menu_button').addClass('active')
+  $('.mob_menu_content').slideDown()
+  
+})
+$('.close_btn').click(function(){
+  $('.mob_menu_button').removeClass('active')
+  $('.mob_menu_content').slideUp()
+  
+})
+
+
+$('.title_li').click(function(){
+  if(  !$(this).hasClass('active')    ){
+    $('.title_li').removeClass('active')
+    $('.title_li').find('.icon-down-open').removeClass('icon-down-open_active')
+    $('.title_li').next().slideUp()
+    $(this).addClass('active')
+    $(this).find('.icon-down-open').addClass('icon-down-open_active')
+    $(this).next().slideDown()
+  }else{
+    $(this).removeClass('active')
+    $(this).find('.icon-down-open').removeClass('icon-down-open_active')
+    $(this).next().slideUp()
+  }
+  
+  
+})
+
+
+$('.btn_show_filter').click(function(){
+  $('.leftCat_block').fadeIn()
+})
+$('.btn_close_filter').click(function(){
+  $('.leftCat_block').fadeOut()
+})
 
 
 
@@ -198,7 +234,18 @@ $('.slider-for').slick({
     asNavFor: '.slider-for',
     dots: false,
     arrows:false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive:[
+      {
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          
+        }
+      }
+    ]
   });
 
 
