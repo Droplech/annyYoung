@@ -103,11 +103,15 @@ input{
 }
 .header_wrapper .nav .nav_content ul li{
     position: relative;
+    transition: .3s;
 }
 .header_wrapper .nav .nav_content ul li a{
     font-size: 30px;
     color: #000;
     letter-spacing: 5px;
+}
+.header_wrapper .nav .nav_content ul li i::before{
+    transition: .3s;
 }
 .header_wrapper .nav .nav_content ul li .nav_toggle_menu{
     position: absolute;
@@ -124,6 +128,12 @@ input{
 .header_wrapper .nav .nav_content ul li:hover .nav_toggle_menu{
     display: block;
 }
+.header_wrapper .nav .nav_content ul li:hover i::before{
+    transform: rotate(-180deg);
+    transition: .3s;
+}
+
+
 
 .header_wrapper .nav .nav_content ul li .nav_toggle_menu ul{
     flex-direction: column;
@@ -444,6 +454,12 @@ input{
     
     
 }
+.popular .popular_content .popular_item .text .price_block p span{
+    font-family: 'Akrobat';
+    font-size: 20px;
+    font-weight: 700;
+}
+
 .popular .popular_content .popular_item .text img{
     width: 95px;
     margin-top: 10px;
@@ -466,6 +482,8 @@ input{
     margin-top: 5px;
 
 }
+
+
 .popular .popular_content .popular_item .text .price_block .sale_price{
     display: none;
 }
@@ -948,7 +966,9 @@ input{
 .leftCat_block{
     width: 270px;
 }
-
+.leftCat_block .btn_close_filter{
+    display: none;
+}
 .leftCat_block .nav{
     display: flex;
 }
@@ -994,6 +1014,7 @@ input{
 .leftCat_block  .filter .item_filter .title{
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 
@@ -1004,6 +1025,23 @@ input{
 .leftCat_block  .filter .item_filter .title i{
     padding-top: 5px;
 }
+.leftCat_block  .filter .item_filter .title div{
+    width: 10px;
+    height: 3px;
+    background-color: #000;
+    margin: 13px 8px ;
+    display: none;
+}
+.leftCat_block  .filter .item_filter .active i{
+    display: none;
+}
+.leftCat_block  .filter .item_filter .active div{
+    display: block;
+}
+
+
+
+
 .leftCat_block  .filter .item_filter{
     margin-top: 15px;
     padding-bottom: 15px;
@@ -1020,6 +1058,7 @@ input{
 }
 .leftCat_block  .filter .item_filter .filter_item_list .label{
     display: flex;
+    cursor: pointer;
 }
 .leftCat_block  .filter .item_filter .filter_item_list .check{
     display: none;
@@ -2281,14 +2320,16 @@ input{
     .catalog_container .leftCat_block{
         display: none;
         position: absolute;
-        z-index: 50;
+        z-index: 200;
         width: 100%;
         height: 100%;
         left: 0;
         padding: 0 20px;
         background-color: #fff;
+        
     }
     .catalog_container .leftCat_block .btn_close_filter{
+        display: block;
         position: absolute;
         top: 0;
         right: 0;
@@ -2333,7 +2374,10 @@ input{
         margin-top: 15px;
     }
     .product_card .consultation{
-        display: none !important;
+       top: 11%;
+    }
+    .product_card_content .info_about_product{
+        padding-right: 80px;
     }
 }
 
