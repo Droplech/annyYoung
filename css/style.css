@@ -37,7 +37,7 @@ input{
 
 .header_wrapper .top_content .logo{
     width: 718px;
-    height: 177px;
+    height: auto;
     margin-top: 53px;
 }
 
@@ -282,9 +282,9 @@ input{
 
 
 .consultation{
-    position: absolute;
+    position: fixed;
     right: -378px;
-    top: -20%;
+    top: 30%;
     border: 3px solid #353535;
     border-right: none;
     width: 430px;
@@ -1249,7 +1249,7 @@ input{
 
 
 
-.right_block .right_content .sort_block .sort_select .select {
+.select {
     position: relative;
     display: block;
     width: 165px;
@@ -1258,7 +1258,7 @@ input{
     margin-bottom: 20px;
 }
 
-.right_block .right_content .sort_block .sort_select .select__head {
+.sort_select .select__head {
     width: 100%;
     max-width: 100%;
     
@@ -1271,7 +1271,7 @@ input{
     cursor: pointer;
 }
 
-.right_block .right_content .sort_block .sort_select .select__head::after {
+.sort_select .select__head::after {
     width: 10px;
     height: 6px;
     background: #FFF url("../img/catalog/arrow.png") no-repeat center / cover;
@@ -1285,11 +1285,11 @@ input{
     color: #000;
 }
 
-.right_block .right_content .sort_block .sort_select .select__head.open::after {
+.sort_select .select__head.open::after {
     transform: translateY(50%) rotate(180deg);
 }
 
-.right_block .right_content .sort_block .sort_select .select__list {
+.sort_select .select__list {
     display: none;
     position: absolute;
     top: 100%;
@@ -1312,18 +1312,18 @@ input{
     overscroll-behavior: contain;
 }
 
-.right_block .right_content .sort_block .sort_select .select__list::-webkit-scrollbar {
+.sort_select .select__list::-webkit-scrollbar {
     width: 7px;
     background-color: #F8F9FA;
     padding: 5px;
 }
 
-.right_block .right_content .sort_block .sort_select .select__list::-webkit-scrollbar-thumb {
+.sort_select .select__list::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #D9D9D9;
 }
 
-.right_block .right_content .sort_block .sort_select .select__list .select__item {
+.sort_select .select__list .select__item {
     position: relative;
     border-top: 1px solid rgba(224, 229, 231, 0.5);
     padding: 10px 15px;
@@ -1331,17 +1331,17 @@ input{
     list-style-type: none;
 }
 
-.right_block .right_content .sort_block .sort_select .select__list .select__item:hover {
+.sort_select .select__list .select__item:hover {
     background-color: rgba(224, 229, 231, 0.5);
 }
 
 
 
-.right_block .right_content .sort_block .sort_select{
+.sort_select{
     display: flex;
 }
 
-.right_block .right_content .sort_block .sort_select p{
+.sort_select p{
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1809,13 +1809,15 @@ input{
     font-weight: 600;
 }
 
-.reviews_cardProd  a{
+.reviews_cardProd .add_rew  p{
     font-size: 24px;
     font-weight: 500;
     color: #000;
     border: 1px solid #000;
     height: 40px;
     padding: 4px 57px;
+    width: 260px;
+    cursor: pointer;
     
 }
 .reviews_cardProd .comment {
@@ -1872,6 +1874,167 @@ input{
 .reviews_cardProd .add_rew{
     margin-top: 50px;
 }
+
+
+.product_card{
+    position: relative;
+}
+.form_reviews{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+.form_reviews .form_block{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 576px;
+    max-width: 80%;
+    height: 700px;
+    background-color: #fff;
+    padding: 50px 60px;
+}
+.form_reviews .form_block .title{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.form_reviews .form_block .your_appraisal{
+    margin-top: 30px;
+}
+.form_reviews .form_block .your_appraisal p{
+    text-align: center;
+}
+.form_reviews .form_block .your_appraisal .stars{
+    display: flex;
+    justify-content: center;
+}
+.form_reviews .form_block .your_appraisal .stars img{
+    width: 30%;
+}
+.form_reviews .form_block .your_appraisal form{
+    margin-top: 50px;
+}
+.form_reviews .form_block .your_appraisal form label{
+    display: inline-block;
+}
+.form_reviews .form_block .your_appraisal form label p{
+    font-weight: 600;
+    font-size: 20px;
+    
+}
+.form_reviews .form_block .your_appraisal form input{
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-left: 10px;
+    padding: 0 10px;
+    font-size: 17px;
+}
+.form_reviews .form_block .your_appraisal form .age input{
+    width: 20%;
+}
+.form_reviews .form_block .your_appraisal form .name,
+.form_reviews .form_block .your_appraisal form .age{
+    margin-bottom: 20px;
+}
+
+
+.form_reviews .form_block .your_appraisal form .type_skin,
+.form_reviews .form_block .your_appraisal form .problem{
+    display: flex;
+}
+.form_reviews .form_block .your_appraisal form .type_skin .sort_select .select,
+.form_reviews .form_block .your_appraisal form .problem .sort_select .select{
+    width: 144px;
+    margin-left: 10px;
+}
+.form_reviews .form_block .your_appraisal form .type_skin .sort_select .sort_select .select__head::after,
+.form_reviews .form_block .your_appraisal form .problem .sort_select .sort_select .select__head::after{
+    right: 12px;
+}
+.form_reviews .form_block .your_appraisal form .type_skin .select__head ,
+.form_reviews .form_block .your_appraisal form .problem .select__head {
+    padding: 1px 15px;
+}
+
+.form_reviews .form_block .your_appraisal form .problem .add_problem{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: relative;
+    margin-left: 10px;
+    padding: 0;
+}
+
+
+.form_reviews .form_block .your_appraisal form .problem .add_problem i{
+    position: absolute;
+    top: -2px;
+    right: 0;
+    bottom: 0;
+    font-size: 18px;
+    left: -3px;
+    margin: auto;
+    color: #000;
+}
+.form_reviews .form_block .your_appraisal form .description .txt{
+    padding-left: 40px;
+}
+.form_reviews .form_block .your_appraisal form .description textarea{
+    width: 100%;
+    outline: none;
+    padding: 10px;
+}
+.form_reviews .form_block .your_appraisal form .send_reviews{
+    text-align: center;
+    margin-top: 50px;
+}
+.form_reviews .your_appraisal form .send_reviews a{
+    font-size: 20px;
+    
+    font-weight: 500;
+    color: #000;
+    border: 1px solid #000;
+    height: 40px;
+    padding: 4px 57px;
+    width: 260px;
+    cursor: pointer;
+}
+
+.form_reviews .form_block .close_form{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.form_reviews .form_block .close_form p{
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .interesting {
@@ -2036,6 +2199,18 @@ input{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1680px){
     .container{
         padding: 0 20px;
@@ -2137,7 +2312,7 @@ input{
     }
     .news .news_content_slider .news_item{
         width: 400px !important;
-        margin: 0 30px;
+        margin: 0 50px;
     }
     .news .news_content_slider .news_item::after{
         width: 368px;
@@ -2173,6 +2348,21 @@ input{
     .reviews_cardProd .comment{
         flex-wrap: wrap;
     }
+    .brands_slider .slick-prev {
+        left: 0;
+    }
+    .brands_slider .slick-next {
+        right: 0;
+    }
+    .news_content_slider  .slick-next{
+        right: 0;
+    }
+    .news_content_slider .slick-prev {
+        left: 0;
+    }
+    .consultation{
+        top: 10%;
+    }
 }
 @media screen and (max-width: 770px){
     .news .news_content_slider .news_item{
@@ -2199,7 +2389,7 @@ input{
     }
     .footer_wrapper{
         flex-wrap: wrap;
-        width: 67%;
+        width: 63%;
         justify-content: center;
     }
     .footer_wrapper .left li{
@@ -2233,6 +2423,16 @@ input{
     }
     .catalog_footer  .footer_wrapper ul li{
         text-align: center;
+    }
+    .popular .title_more, .news .title_more{
+        display: flex;
+        justify-content: center;
+    }
+    .popular .title_more a, .news .title_more a{
+        position: static;
+        height: 45px;
+        margin-left: 40px;
+        margin-top: 5px;
     }
 }
 @media screen and (max-width: 420px){
@@ -2289,7 +2489,7 @@ input{
     .consultation{
         width: 390px;
         top: 1%;
-        right: -337px;
+        right: -352px;
     }
 
     .brands .slick-prev {
@@ -2307,6 +2507,21 @@ input{
     .popular .title{
         font-size: 48px;
         letter-spacing: 1px;
+        
+    }
+    .popular .title h3{
+        font-size: 26px;
+    }
+    .consultation .title{
+        width: 40px;
+    }
+    .popular .title_more a, .news .title_more a {
+        position: static;
+        height: 45px;
+        margin-left: 17px;
+        margin-top: 5px;
+        font-size: 15px;
+        padding: 14px 7px;
     }
     .nav .nav_content{
         display: none !important;
@@ -2378,6 +2593,18 @@ input{
     }
     .product_card_content .info_about_product{
         padding-right: 80px;
+    }
+    .anny_young_content{
+        flex-wrap: wrap;
+    }
+    .anny_young_content .anny_young_item{
+        flex-basis: 50%;
+    }
+    .brands .brands_slider .brand{
+        margin: 0 10px;
+    }
+    .brands .brands_slider{
+        padding: 110px 0;
     }
 }
 
