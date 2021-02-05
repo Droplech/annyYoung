@@ -90,12 +90,19 @@ $('.consultation .title').click(function(){
 $('.mob_menu_button').click(function(){
   $('.mob_menu_button').addClass('active')
   $('.mob_menu_content').slideDown()
+  $('.consultation').css({
+    'opacity':'0',
+    'z-index': '-1'
+  })
   
 })
 $('.close_btn').click(function(){
   $('.mob_menu_button').removeClass('active')
   $('.mob_menu_content').slideUp()
-  
+  $('.consultation').css({
+    'opacity':'1',
+    'z-index': '50'
+  })
 })
 
 
@@ -168,6 +175,15 @@ $('.brands_slider').slick({
     {
       breakpoint: 1450,
       settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        
+      }
+    },
+    {
+      breakpoint: 1370,
+      settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
@@ -205,6 +221,15 @@ $('.news_content_slider').slick({
   responsive: [
     {
       breakpoint: 1450,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        
+      }
+    },
+    {
+      breakpoint: 1370,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
