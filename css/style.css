@@ -2535,6 +2535,7 @@ input{
     .popular .popular_content .popular_item{
         flex-basis: 50%;
     }
+   
     .popular_content .popular_item .text .buy{
         bottom: -6px;
     }
@@ -2723,7 +2724,54 @@ input{
     }
 }
 
-
+@media screen and (max-width: 375px){
+    .popular_content .popular_item .text .buy{
+        font-size: 17px;
+        padding: 3px 0;
+        width: 80px;
+        height: 25px;
+    }
+    .popular .popular_content .sale_item .text .price_block .sale_price{
+        padding: 1px 11px;
+        margin-left: 5px;
+    }
+    .popular .popular_content .popular_item .img h3{
+        font-size: 25px;
+        bottom: -11px;
+    }
+    .popular .popular_content .popular_item .text{
+        padding-top: 12px;
+    }
+    .news .news_content_slider .news_item{
+        margin: 0 9px;
+    }
+    .news .slick-next{
+        right: 13px;
+    }
+    .basket{
+        width: 70px;
+        height: 70px;
+    }
+    .basket img {
+        margin: 14px 0 0 9px;
+    }
+    .consultation{
+        top: 25%;
+        width: 355px;
+        height: 330px;
+        right: -322px;
+    }
+    .consultation .title{
+        width: 30px;
+        padding-top: 70%;
+    }
+    .product_card .consultation {
+        top: 25%;
+    }
+    .catalog .consultation{
+        top: 25%;
+    }
+}
 
 
 
