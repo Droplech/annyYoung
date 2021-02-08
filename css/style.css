@@ -2724,7 +2724,7 @@ input{
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 400px){
     .popular_content .popular_item .text .buy{
         font-size: 17px;
         padding: 3px 0;
