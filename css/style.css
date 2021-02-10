@@ -49,6 +49,25 @@ input{
     width: 600px;
     padding-top: 93px;
 }
+
+
+.header_wrapper .top_content .info_callback .search_links .search_links_icon{
+    width: 42px;
+    height: 42px;
+}
+.header_wrapper .top_content .info_callback .search_links .search_links_icon img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
 .header_wrapper .top_content .info_callback .search_links{
     display: flex;
     justify-content: space-between;
@@ -908,7 +927,10 @@ input{
 .footer_wrapper .right{
     width: 222px;
 }
-
+.footer_wrapper .right ul li .footer_wp_icon img{
+    width: 25px;
+    height: 25px;
+}
 
 .footer_wrapper .right .payment{
     width: 100%;
@@ -2539,6 +2561,22 @@ input{
     .popular_content .popular_item .text .buy{
         bottom: -6px;
     }
+    .reviews_cardProd .reviews_title h3{
+        font-size: 32px;
+    }
+    .reviews_cardProd .reviews_title{
+        justify-content: flex-start;
+    }
+    .reviews_cardProd .reviews_title a{
+        font-size: 20px;
+        text-align: center;
+        padding: 7px 0;
+        width: 180px;
+        margin-left: 15px;
+    }
+    .form_reviews .form_block{
+        padding: 50px 17px;
+    }
 }
 @media screen and (max-width: 420px){
     .header_wrapper .top_content{
@@ -2646,15 +2684,17 @@ input{
         width: 100%;
         height: 100%;
         left: 0;
-        padding: 0 20px;
+        padding: 40px 20px;
         background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,1)
         
     }
+  
     .catalog_container .leftCat_block .btn_close_filter{
         display: block;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 20px;
+        right: 20px;
         border: 1px solid #000;
         padding: 3px 10px;
     }
@@ -2770,6 +2810,31 @@ input{
     }
     .catalog .consultation{
         top: 25%;
+    }
+    .anny_young{
+        margin-top: 0;
+    }
+    .product_card_content .info_about_product .prod_price .add_basket{
+        padding: 5px 30px;
+    }
+    .interesting .title{
+        font-size: 33px;
+    }
+    .reviews_cardProd .reviews_title a{
+        width: 160px;
+    }
+    .form_reviews .form_block .your_appraisal form .name, .form_reviews .form_block .your_appraisal form .age{
+        display: flex;
+    }
+    .form_reviews .form_block{
+        height: 650px;
+        max-width: 90%;
+    }
+    .form_reviews{
+        overflow-x: auto;
+    }
+    .form_reviews .form_block .your_appraisal form{
+        margin-top: 30px;
     }
 }
 

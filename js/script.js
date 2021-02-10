@@ -156,6 +156,7 @@ $('.close_form, .send_reviews').click(function(){
 
 
 
+
 $('.banner_slider_left, .banner_slider_right').slick({
   infinite: true,
   slidesToShow: 1,
