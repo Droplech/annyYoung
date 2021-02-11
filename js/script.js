@@ -140,7 +140,7 @@ $('.add_rew').click(function(e){
   
   $('.form_reviews').fadeIn()
 })
-$('.close_form, .send_reviews').click(function(){
+$('.close_form, .send_reviews, .form_wrapper').click(function(){
   $('.form_reviews').fadeOut()
 })
 
