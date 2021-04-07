@@ -427,15 +427,22 @@ input{
 .popular .popular_content{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
 .popular .popular_content .popular_item{
-    width: 300px;
+    flex-basis: 25%;
     margin-bottom: 40px;
+    
 }
+
+
+.popular_news_block .popular_content .popular_item{
+    flex-basis: 20% ;
+}
+
+
 
 .popular .popular_content .popular_item .img{
     width: 100%;
@@ -451,6 +458,7 @@ input{
     letter-spacing: 2px;
     bottom: -16px;
     left: 5px;
+    color: #000;
 }
 .popular .popular_content .popular_item .text{
     padding-top: 30px;
@@ -1841,6 +1849,34 @@ input{
     cursor: pointer;
 }
 
+.product_card_content .links{
+    margin-top: 40px;
+}
+.product_card_content .links span{
+    font-size: 25px;
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.product_card_content .links span a{
+    color: #990000;
+    text-decoration: underline;
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2398,6 +2434,7 @@ input{
     width: 430px ;
     padding-bottom: 25px;
     margin-bottom: 60px;
+    z-index: 2;
    
 }
 
@@ -2419,25 +2456,32 @@ input{
     width: 590px;
     left: 70px;
     height: 540px;
+    z-index: 2 !important;
 }
 .news_block_wrapper .news_item .img{
     width: 100%;
     height: 430px;
-    position: relative;
+    
+    
 }
 .news_block_wrapper .news_item .img img{
     width: 100%;
     height: 100%;
+   
+    position: relative;
 }
 .news_block_wrapper .news_item .img h3{
-    position: absolute;
-    bottom: -20px;
-    left: 50px;
+    margin-top: -25px;
+    margin-left: 45px;
     font-size: 34px;
     letter-spacing: 2px;
+    z-index: 100;
+    color: #000;
+    position: absolute;
 }
 .news_block_wrapper .news_item-mod .img h3{
-    left: 110px;
+    margin-left: 95px;
+
 }
 .news_block_wrapper .news_item .text{
     padding-left: 45px;
@@ -2449,6 +2493,7 @@ input{
 .news_block_wrapper .news_item .text p{
     font-family: 'Akrobat';
     font-weight: 700;
+    color: #000;
 }
 .news_block_wrapper .news_item-mod .text p{
     letter-spacing: 0.5px;
@@ -2477,14 +2522,18 @@ input{
     margin: 0;
     padding-top: 50px;
 }
-
+.popular_card{
+    border-top: none;
+}
 
 .popular_news_block .title{
     font-size: 60px;
     text-align: left;
     letter-spacing: 7px;
 }
-
+.ind_popular .title{
+    text-align: center;
+}
 
 
 /* open news */
@@ -2515,11 +2564,11 @@ input{
 
 .open_news .open_news_wrapper .block_top .col_right{
     position: relative;
+    width: 860px;
 }
 .open_news .open_news_wrapper .block_top .col_right .txt_block{
-    position: absolute;
-    right: -81px;
-    top: 134px;
+    margin: 15px 0 0 -160px;
+    
     border: 2px solid #000;
     width: 1095px;
     padding-left: 175px;
@@ -2530,12 +2579,12 @@ input{
     font-size: 40px;
     letter-spacing: 2px;
 }
-.open_news .open_news_wrapper .description{
+/* .open_news .open_news_wrapper .description{
     font-size: 40px;
     text-align: center;
-    margin-top: 125px;
+    
     margin-bottom: 65px;
-}
+} */
 
 .open_news .open_news_wrapper .block_ps{
     width: 100%;
@@ -2575,6 +2624,68 @@ input{
 
 
 
+
+
+.block_page-news{
+    /* margin-top: 125px; */
+    width: 90%;
+    margin: 125px auto 0 auto;
+}
+.block_page-news p{
+    font-size: 40px; 
+    text-align: center;
+    margin-bottom: 65px;
+}
+.block_page-news p img{
+    width: 100%;
+}
+
+
+.block_page-news blockquote{
+    background-color: #FFF7D7;
+    padding: 40px 40px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 65px;
+    position: relative;
+    
+}
+
+.block_page-news blockquote p{
+    margin-bottom: 0;
+    font-size: 50px;
+}
+
+.block_page-news blockquote::after{
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: 10px;
+    background-image: url('../img/open_news/arrow.png');
+    width: 60px;
+    height: 114px;
+}
+
+.block_page-news blockquote::before{
+    content: "";
+    position: absolute;
+    right: -23px;
+    bottom: 10px;
+    transform: rotate(180deg);
+    background-image: url('../img/open_news/arrow.png');
+    width: 60px;
+    height: 114px;
+}
+
+
+
+
+
+
+
+
+
+
 /*contacts */
 
 .contscts_wrapper .title{
@@ -2597,6 +2708,7 @@ input{
 }
 .contscts_wrapper .cantacts .contacts_item .left{
     padding-left: 90px;
+    width: 380px;
 }
 .contscts_wrapper .cantacts .contacts_item .left .info h3{
     font-size: 33px;
@@ -2635,8 +2747,13 @@ input{
 .contscts_wrapper .cantacts .contacts_item .left .about{
     margin-top: 165px;
 }
+.contscts_wrapper .cantacts .contacts_item .left .about ul li{
+    width:100%;
+    padding-right: 20px;
+}
 .contscts_wrapper .cantacts .contacts_item .left .about ul li p{
     font-size: 28px;
+    padding-right: 20px;
 }
 .contscts_wrapper .cantacts .contacts_item .left .about ul > li + li{
     margin-top: 5px;
@@ -2796,24 +2913,29 @@ input{
 }
 .basket_page .basket_product_items .item .img_desc_prod .img{
     width: 190px;
+    max-width: 190px;
 }
 .basket_page .basket_product_items .item .img_desc_prod .img img{
     width: 100%;
 }
 .basket_page .basket_product_items .item .img_desc_prod{
     position: relative;
-    width: 475px;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
 }
 .basket_page .basket_product_items .item .img_desc_prod .desc{
-    position: absolute;
-    top: 20px;
-    right: 38px;
+    position: relative;
+    top: auto;
+    right: auto;
     border-left: 2px solid #000;
     padding-left: 10px;
+    margin-left: -40px;
 }
 .basket_page .basket_product_items .item .img_desc_prod .desc h3{
     font-size: 32px;
     letter-spacing: 1px;
+    color: #000;
 }
 
 .basket_page .basket_product_items .item .img_desc_prod .desc p{
@@ -2873,7 +2995,7 @@ input{
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top: 101px;
+    top: 52%;
     right: -50px;
 
 }
@@ -2947,10 +3069,13 @@ input{
     font-weight: 600;
     padding-right: 16px;
 }
-.basket_page .promo .chekout .chek_price h3{
+.basket_page .promo .chekout .chek_price h3,
+.basket_page .promo .chekout .new_price h3{
     font-size: 43px;
 }
-.basket_page .promo .chekout .chek_price h3 span{
+
+.basket_page .promo .chekout .chek_price h3 span,
+.basket_page .promo .chekout .new_price h3 span{
     font-size: 20px;
 }
 .basket_page .promo .chekout .order_btn{
@@ -3026,75 +3151,6 @@ input{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .news_block_wrapper .news_item .img .img2{
     display: none;
 }
@@ -3141,6 +3197,7 @@ input{
 }
 .help_items_block .help_item{
     border-top: 3px solid #000;
+    outline: none;
     
 }
 .help_items_block .help_item:last-child{
@@ -3216,7 +3273,7 @@ input{
 }
 
 .help_items_block .help_item .help_item_txt ul li .index_num p{
-    font-size: 19px ;
+    font-size: 19px !important;
     color: #fff ;
     text-align: center ;
 }
@@ -3253,8 +3310,13 @@ input{
     position: absolute;
     top: 0;
     left: -45px;
+    width: 36px;
+}
+.help_items_block .delivery_ter .help_item_txt_content ul li .icon_bus img{
+    width: 100%;
 }
 
+.help_items_block .delivery_ter .help_item_txt_content ul li .icon_bus
 .help_items_block .pick_up .help_item_txt_content ul:last-child a{
     font-size: 30px;
     color: #000;
@@ -3273,6 +3335,10 @@ input{
     position: absolute;
     top: 0;
     left: -45px;
+    width: 20px;
+}
+.help_items_block .pick_up .help_item_txt_content ul li .icon_marker img{
+    width: 100%;
 }
 .help_items_block .pick_up .help_item_txt_content ul:first-child li p span{
     color: #000;
@@ -3318,13 +3384,93 @@ input{
 
 
 
+/* basket promo */
+
+.basket_page_promo .promo .ok{
+    background-color: #00A43A;
+    border-color: #00A43A !important;
+}
 
 
+.basket_page_promo .promo .ok img{
+    filter: invert(1);
+}
+
+.basket_page .promo .input_code input{
+    font-family: 'Bebas Neue';
+    font-weight: bold;
+    font-size: 20px !important;
+    text-align: center;
+}
 
 
+.basket_page_promo .promo .promo_not_try{
+    background-color: #D90101;
+    border-color: #D90101 !important;
+    display: none;
+   
+}
+
+.basket_page_promo .promo .promo_not_try i{
+    color: #fff;
+    font-size: 27px;
+    line-height: 43px;
+}
 
 
+.basket_page_promo .promo .chekout .chek_price h3{
+    color: #999999;
+    position: relative;
+}
+.basket_page_promo .promo .chekout .chek_price h3::after,
+.basket_page_promo .promo .chekout .chek_price h3::before{
+    content: "";
+    position: absolute;
+    background-color: #B6272B;
+    width: 100px;
+    height: 2px;
+}
+.basket_page_promo .promo .chekout .chek_price h3::after{
+    top: 20px;
+    left: 0;
+    transform: rotate(25deg);
+}
 
+.basket_page_promo .promo .chekout .chek_price h3::before{
+    top: 20px;
+    left: 0;
+    transform: rotate(-30deg);
+}
+.basket_page_promo .promo .chekout .new_price{
+    position: relative;
+    padding-top: 23px;
+    margin-right: 20px;
+}
+.basket_page_promo .promo .chekout .new_price .new_sale{
+    position: absolute;
+    width: 38px;
+    top: 15px;
+    left: 18px;
+}
+.basket_page_promo .promo .chekout .new_price .new_sale img{
+    width: 100%;
+}
+.basket_page_promo .promo .chekout .new_price .new_sale p{
+    position: absolute;
+    font-family: 'Bebas Neue';
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    top: 12px;
+    left: -6px;
+    transform: rotate(90deg);
+}
+.basket_page_promo .promo .chekout .new_price h3{
+    color: #fff;
+    background-color: #B42125;
+    padding: 3px 40px 3px 70px;
+    border-radius: 15px;
+}
 
 
 
@@ -3395,15 +3541,27 @@ input{
     .news_block_content .top_block{
         justify-content: space-evenly;
     }
+
+
+
     .open_news .open_news_wrapper .block_ps{
         width: 90%;
         margin: 0 auto;
     }
+    .block_page-news blockquote{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 65px;
+    }
+
+
+
     .open_news .open_news_wrapper .block_top .col_right h1{
         font-size: 80px;
     }
     .open_news .open_news_wrapper .block_top .col_right .txt_block{
-        right: -242px;
+        width: 1040px;
+        padding-left: 160px;
     }
 }
 @media screen and (max-width: 1550px){
@@ -3425,9 +3583,11 @@ input{
     .header_wrapper .nav .nav_content ul li a{
         font-size: 23px;
     }
-    .popular .popular_content{
-        justify-content: space-evenly
+    
+    .popular .popular_content .popular_item{
+        flex-basis: 33%;
     }
+  
     .catalog_container .right_block{
         width: 70%;
     }
@@ -3459,8 +3619,7 @@ input{
         
     }
     .open_news .open_news_wrapper .block_top .col_right .txt_block{
-        right: -16px;
-        top: 99px;
+        margin: 15px 0 0 -120px;
         width: 798px;
         padding-left: 122px;
         padding-top: 31px;
@@ -3476,7 +3635,9 @@ input{
     .basket_page .basket_product_items .item{
         width: 85%;
     }
-
+    .popular_news_block .popular_content .popular_item{
+        flex-basis: 20% ;
+    }
 
 
 
@@ -3544,15 +3705,12 @@ input{
     }
 
 }
-
 @media screen and (max-width: 1280px){
     .banners .block_banners .banner_slider_left, 
     .banners .block_banners .banner_slider_right {
         width: 570px;
     }
-    .popular .popular_content{
-        justify-content: space-between
-    }
+ 
     .header_wrapper .nav .nav_content ul{
         padding-top: 10px;
     }
@@ -3567,9 +3725,7 @@ input{
         left: 25px;
     }
   
-    .popular .popular_content{
-        justify-content: space-evenly;
-    }
+    
     .news_block_content .top_block .name_brand{
         flex-wrap: wrap;
     }
@@ -3595,7 +3751,13 @@ input{
     .open_news .open_news_wrapper .description{
         font-size: 29px;
     }
+    .block_page-news p{
+        font-size: 29px;
+    }
     .open_news .open_news_wrapper .block_ps p{
+        font-size: 29px;
+    }
+    .block_page-news blockquote p{
         font-size: 29px;
     }
     .error .error_content .left{
@@ -3704,9 +3866,10 @@ input{
     .open_news .open_news_wrapper .block_top .col_left {
         width: 375px;
     }
+    .open_news .open_news_wrapper .block_top .col_right{
+        width: 510px;
+    }
     .open_news .open_news_wrapper .block_top .col_right .txt_block {
-        right: -80px;
-        top: 82px;
         width: 609px;
         padding-left: 104px;
         padding-top: 31px;
@@ -3718,6 +3881,9 @@ input{
     .open_news .open_news_wrapper .description {
         font-size: 24px;
     }
+    .block_page-news p{
+        font-size: 24px;
+    }
     .contscts_wrapper .cantacts .contacts_item{
         flex-wrap: wrap;
     }
@@ -3726,6 +3892,7 @@ input{
         justify-content: space-between;
         width: 100%;
         flex-wrap: wrap;
+        margin-bottom: 30px;
     }
     .contscts_wrapper .cantacts .contacts_item .left .conection,
     .contscts_wrapper .cantacts .contacts_item .left .about{
@@ -3772,6 +3939,15 @@ input{
     .help_content .help_title ul{
         flex-wrap: wrap;
     }
+    .popular .popular_content .popular_item {
+        flex-basis: 50%;
+    }
+    
+    
+    .popular_news_block .popular_content .popular_item{
+        flex-basis: 33% ;
+    }
+   
 }
 @media screen and (max-width: 770px){
     .consultation {
@@ -3878,17 +4054,38 @@ input{
     .open_news .open_news_wrapper .description {
         font-size: 18px;
     }
+    .block_page-news p{
+        font-size: 18px;
+    }
     .open_news .open_news_wrapper .block_ps p {
+        font-size: 18px;
+    }
+    .block_page-news blockquote p {
         font-size: 18px;
     }
     .open_news .open_news_wrapper .description{
         margin-top: 310px;
     }
+    .open_news .open_news_wrapper .block_top .col_right h1 {
+        font-size: 35px;
+    }
+    .open_news .open_news_wrapper .block_top .col_left{
+        margin-right: 16px;
+    }
+    .open_news .open_news_wrapper .block_top .col_right{
+        width: 370px;
+    }
     .open_news .open_news_wrapper .block_top .col_right .txt_block{
-        text-align: center;
-        top: 355px;
-        padding-left: 0;
-        right: 67px;
+        /* position: absolute;
+        text-align: center; */
+        padding-right: 27px;
+        padding-left: 70px;
+        width: 420px;
+        margin: 15px 0 0 -73px;
+        
+    }
+    .open_news .open_news_wrapper .block_top .col_right .txt_block p br{
+        display: none;
     }
     .open_news .open_news_wrapper .description:last-child{
         margin-top: 35px;
@@ -3932,11 +4129,14 @@ input{
         font-size: 50px;
         letter-spacing: 4px;
     }
+    .block_page-news{
+        margin-top: 65px;
+    }
 }
 @media screen and (max-width: 710px){
     .basket_page .basket_product_items .item .price_basket_prod .btn_close{
         bottom: 0;
-        top: auto;
+        top: 14%;
     }
     .help_content{
         width: 100%;
@@ -3948,6 +4148,15 @@ input{
         width: 80%;
     }
 }
+@media screen and (max-width: 600px){
+    .basket_page .basket_product_items .item .img_desc_prod{
+        flex-wrap: wrap;
+    }
+    .basket_page .basket_product_items .item .img_desc_prod .desc{
+        margin-left: 0;
+    }
+}
+
 @media screen and (max-width: 500px){
     .consultation{
         height: 400px;
@@ -3963,6 +4172,7 @@ input{
     }
     .popular .popular_content .popular_item{
         flex-basis: 50%;
+        margin-right: 0;
     }
    
     .popular_content .popular_item .text .buy{
@@ -4007,19 +4217,47 @@ input{
         padding-right: 25px;
     }
     .open_news .open_news_wrapper .block_top{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .open_news .open_news_wrapper .block_top .col_right h1{
         letter-spacing: 3px;
     }
+    .open_news .open_news_wrapper .block_top .col_right {
+        width: 100%;
+        margin-top: 25px;
+    }
     .open_news .open_news_wrapper .block_top .col_right .txt_block{
         width: 100%;
-        right: 0;
-        top: 440px;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
     }
     .open_news .open_news_wrapper .description {
         margin-top: 245px;
         font-size: 15px;
+    }
+    .block_page-news p{
+        font-size: 15px;
+    }
+    .block_page-news p br{
+        display: none;
+    }
+    .block_page-news blockquote p br{
+        display: block;
+    }
+    .block_page-news{
+        margin-top: 65px;
+    }
+    .block_page-news blockquote::after{
+        width: 30px;
+        height: 56px;
+        background-size: 100%;
+    }
+    .block_page-news blockquote::before{
+        width: 30px;
+        height: 56px;
+        background-size: 100%;
     }
     .open_news .open_news_wrapper .description br{
         display: none;
@@ -4107,6 +4345,27 @@ input{
     .help_content .help_items_block{
         padding-left: 0;
     }
+    .basket_page .promo .chekout{
+        flex-wrap: wrap;
+    }
+    .basket_page .promo .chekout .order_btn{
+        margin-top: 35px;
+    }
+    .basket_page .basket_product_items .item{
+        flex-direction: column;
+    }
+    .basket_page .basket_product_items .item .price_basket_prod .btn_close{
+        right: 0;
+        bottom: 0;
+        top: auto;
+    }
+    .news_block_wrapper .news_item-mod .img h3{
+        margin-left: 45px;
+    }
+    .thenks_page .popular .popular_content .popular_item{
+        flex-basis: 50% ;
+    }
+   
    
 }
 @media screen and (max-width: 420px){
@@ -4114,9 +4373,7 @@ input{
         flex-wrap: wrap;
         justify-content: center;
     }
-    .popular .popular_content{
-        justify-content: center;
-    }
+   
     .footer_wrapper ul li{
         text-align: center;
     }
@@ -4302,8 +4559,10 @@ input{
     .open_news .open_news_wrapper .block_top .col_right h1 {
         letter-spacing: 1px;
     }
+    .help_content .help_title ul li a{
+        font-size: 19px;
+    }
 }
-
 @media screen and (max-width: 400px){
     .popular_content .popular_item .text .buy{
         font-size: 17px;
@@ -4389,11 +4648,27 @@ input{
     .open_news .open_news_wrapper .block_ps p{
         font-size: 15px;
     }
+    .open_news .open_news_wrapper .block_top .col_right .txt_block p{
+        font-size: 16px;
+    }
+    .open_news .open_news_wrapper .description{
+        margin-top: 310px;
+    }
+    .block_page-news{
+        margin-top: 65px;
+    }
+    .block_page-news blockquote p{
+        font-size: 15px;
+    }
 }
-
-
-
-
+@media screen and (max-width: 360px){
+    .error .error_content .left{
+        margin-bottom: 40px;
+    }
+    .block_page-news{
+        margin-top: 65px;
+    }
+}
 
 
 
