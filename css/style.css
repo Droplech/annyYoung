@@ -2530,7 +2530,15 @@ input{
     font-size: 60px;
     text-align: left;
     letter-spacing: 7px;
+    width: 70%;
+    margin: 0 auto;
 }
+.popular_news_block .popular_content{
+    width: 70%;
+    margin: 30px auto 0 auto;
+}
+
+
 .ind_popular .title{
     text-align: center;
 }
@@ -4562,6 +4570,9 @@ input{
     }
     .help_content .help_title ul li a{
         font-size: 19px;
+    }
+    .popular_news_block .popular_content{
+        width: 100%;
     }
 }
 @media screen and (max-width: 400px){
