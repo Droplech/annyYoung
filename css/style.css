@@ -4248,6 +4248,7 @@ input{
     }
     .block_page-news{
         margin-top: 65px;
+        width: 100%;
     }
     .block_page-news blockquote::after{
         width: 30px;
