@@ -2526,14 +2526,14 @@ input{
     border-top: none;
 }
 
-.popular_news_block .title{
+.popular_open_news_block .title{
     font-size: 60px;
     text-align: left;
     letter-spacing: 7px;
     width: 70%;
     margin: 0 auto;
 }
-.popular_news_block .popular_content{
+.popular_open_news_block .popular_content{
     width: 70%;
     margin: 30px auto 0 auto;
 }
